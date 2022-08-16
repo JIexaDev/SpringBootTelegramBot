@@ -43,7 +43,8 @@ public class TelegramBot extends TelegramLongPollingBot {
             switch (messageText) {
                 case "/start":
                     startCommandReceived(chatId, update.getMessage().getFrom().getUserName());
-                    registerUser(update.getMessage());
+//                    Регистрация в БД
+//                    registerUser(update.getMessage());
                     break;
                 default:
                     sendMessage(chatId, "Команда не поддерживается!");
